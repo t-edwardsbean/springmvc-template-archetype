@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>tspringmvc</id>
+  <resources>
+    <resource>.gitignore</resource>
+    <resource>app\base\pom.xml</resource>
+    <resource>app\base\src\main\resources\tspringmvc-base.xml</resource>
+    <resource>app\biz\pom.xml</resource>
+    <resource>app\biz\src\main\resources\tspringmvc-biz.xml</resource>
+    <resource>app\dal\pom.xml</resource>
+    <resource>app\dal\src\main\resources\META-INF\spring\tspringmvc-dal-db.xml</resource>
+    <resource>app\dal\src\main\resources\META-INF\spring\tspringmvc-dal.xml</resource>
+    <resource>app\pom.xml</resource>
+    <resource>app\test\pom.xml</resource>
+    <resource>app\web\pom.xml</resource>
+    <resource>app\web\src\main\resources\spring\tspringmvc-web-security.xml</resource>
+    <resource>app\web\src\main\resources\spring\tspringmvc-web.xml</resource>
+    <resource>build.sh</resource>
+    <resource>mybatis-gen\config.properties</resource>
+    <resource>mybatis-gen\config.xml</resource>
+    <resource>mybatis-gen\gen.bat</resource>
+    <resource>mybatis-gen\gen.sh</resource>
+    <resource>mybatis-gen\mybatis-generator-core-1.3.3-SNAPSHOT-baifubao.jar</resource>
+    <resource>mybatis-gen\mysql-connector-java-5.1.26.jar</resource>
+    <resource>war\pom.xml</resource>
+    <resource>war\src\main\webapp\WEB-INF\spring\webmvc-config.xml</resource>
+    <resource>war\src\main\webapp\WEB-INF\web.xml</resource>
+  </resources>
+</archetype>

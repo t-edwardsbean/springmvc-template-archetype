@@ -1,0 +1,39 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:annotation-driven/>
+
+	<!--<mvc:interceptors>-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**"/>-->
+			<!--<bean class="com.edwardsbean.timo.log.LogInterceptor"/>-->
+		<!--</mvc:interceptor>-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**"/>-->
+			<!--<bean class="com.edwardsbean.timo.security.AuthInterceptor"/>-->
+		<!--</mvc:interceptor>-->
+	<!--</mvc:interceptors>-->
+
+	<!--<mvc:resources mapping="/**" location="/swagger-resource/" />-->
+
+	<!--<bean class="com.edwardsbean.timo.service.MySwaggerConfig"/>-->
+
+	<!--<bean class="com.edwardsbean.timo.service.exception.CustomHandlerExceptionResolver" id="customHandlerExceptionResolver"/>-->
+
+
+	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+	<!--<property name="prefix" value="/WEB-INF/views/" />-->
+	<!--<property name="suffix" value=".jsp" />-->
+	<!--</bean>-->
+
+	<context:component-scan base-package="com.haomiao"/>
+
+</beans>
