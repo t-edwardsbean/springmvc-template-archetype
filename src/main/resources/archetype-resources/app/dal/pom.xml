@@ -36,11 +36,9 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-base</artifactId>
         </dependency>
     </dependencies>
 

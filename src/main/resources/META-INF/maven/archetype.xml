@@ -1,27 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?><archetype>
   <id>tspringmvc</id>
-  <resources>
+  <resources> 
     <resource>.gitignore</resource>
     <resource>app\base\pom.xml</resource>
-    <resource>app\base\src\main\resources\tspringmvc-base.xml</resource>
+    <resource>app\base\src\main\resources\META-INF\spring\tspringmvc-base.xml</resource>
     <resource>app\biz\pom.xml</resource>
-    <resource>app\biz\src\main\resources\tspringmvc-biz.xml</resource>
+    <resource>app\biz\src\main\java\com\edwardsbean\tspringmvc\biz\PhoneService.java</resource>
+    <resource>app\biz\src\main\java\com\edwardsbean\tspringmvc\biz\PhoneServiceImpl.java</resource>
+    <resource>app\biz\src\main\resources\META-INF.spring\tspringmvc-biz.xml</resource>
     <resource>app\dal\pom.xml</resource>
+    <resource>app\dal\src\main\java\com\edwardsbean\tspringmvc\dal\entity\Phone.java</resource>
+    <resource>app\dal\src\main\java\com\edwardsbean\tspringmvc\dal\entity\PhoneExample.java</resource>
+    <resource>app\dal\src\main\java\com\edwardsbean\tspringmvc\dal\mapper\auto\PhoneMapper.java</resource>
+    <resource>app\dal\src\main\java\com\edwardsbean\tspringmvc\dal\PhoneDao.java</resource>
+    <resource>app\dal\src\main\java\com\edwardsbean\tspringmvc\dal\PhoneDaoImpl.java</resource>
+    <resource>app\dal\src\main\resources\META-INF\mappers\auto\com\edwardsbean\tspringmvc\dal\entity\PhoneMapper.xml</resource>
     <resource>app\dal\src\main\resources\META-INF\spring\tspringmvc-dal-db.xml</resource>
     <resource>app\dal\src\main\resources\META-INF\spring\tspringmvc-dal.xml</resource>
     <resource>app\pom.xml</resource>
     <resource>app\test\pom.xml</resource>
+    <resource>app\test\src\main\java\com\edwardsbean\tspringmvc\test\PhoneDaoTest.java</resource>
+    <resource>app\test\src\main\resources\log4j.properties</resource>
     <resource>app\web\pom.xml</resource>
-    <resource>app\web\src\main\resources\spring\tspringmvc-web-security.xml</resource>
-    <resource>app\web\src\main\resources\spring\tspringmvc-web.xml</resource>
+    <resource>app\web\src\main\java\com\edwardsbean\tspringmvc\BaseController.java</resource>
+    <resource>app\web\src\main\java\com\edwardsbean\tspringmvc\PhoneController.java</resource>
+    <resource>app\web\src\main\resources\META-INF\spring\tspringmvc-web-security.xml</resource>
+    <resource>app\web\src\main\resources\META-INF\spring\tspringmvc-web.xml</resource>
     <resource>build.sh</resource>
     <resource>mybatis-gen\config.properties</resource>
     <resource>mybatis-gen\config.xml</resource>
+    <resource>mybatis-gen\database.sql</resource>
     <resource>mybatis-gen\gen.bat</resource>
     <resource>mybatis-gen\gen.sh</resource>
     <resource>mybatis-gen\mybatis-generator-core-1.3.3-SNAPSHOT-baifubao.jar</resource>
     <resource>mybatis-gen\mysql-connector-java-5.1.26.jar</resource>
     <resource>war\pom.xml</resource>
+    <resource>war\src\main\resources\log4j.properties</resource>
+    <resource>war\src\main\webapp\swagger-resource\css\print.css</resource>
+    <resource>war\src\main\webapp\swagger-resource\css\reset.css</resource>
+    <resource>war\src\main\webapp\swagger-resource\css\screen.css</resource>
+    <resource>war\src\main\webapp\swagger-resource\css\typography.css</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-700.eot</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-700.svg</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-700.ttf</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-700.woff</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-700.woff2</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-regular.eot</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-regular.svg</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-regular.ttf</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-regular.woff</resource>
+    <resource>war\src\main\webapp\swagger-resource\fonts\droid-sans-v6-latin-regular.woff2</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\explorer_icons.png</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\favicon-16x16.png</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\favicon-32x32.png</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\favicon.ico</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\logo_small.png</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\pet_store_api.png</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\throbber.gif</resource>
+    <resource>war\src\main\webapp\swagger-resource\images\wordnik_api.png</resource>
+    <resource>war\src\main\webapp\swagger-resource\index.html</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\backbone-min.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\handlebars-2.0.0.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\highlight.7.3.pack.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\jquery-1.8.0.min.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\jquery.ba-bbq.min.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\jquery.slideto.min.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\jquery.wiggle.min.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\marked.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\swagger-oauth.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\underscore-min.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\lib\underscore-min.map</resource>
+    <resource>war\src\main\webapp\swagger-resource\o2c.html</resource>
+    <resource>war\src\main\webapp\swagger-resource\swagger-ui.js</resource>
+    <resource>war\src\main\webapp\swagger-resource\swagger-ui.min.js</resource>
     <resource>war\src\main\webapp\WEB-INF\spring\webmvc-config.xml</resource>
     <resource>war\src\main\webapp\WEB-INF\web.xml</resource>
   </resources>

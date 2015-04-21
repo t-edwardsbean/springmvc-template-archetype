@@ -41,6 +41,6 @@
         </javaClientGenerator>
 
         <!-- add your table below -->
-        <table tableName="city" domainObjectName="City" />
+        <table tableName="${rootArtifactId}_phone" domainObjectName="Phone" />
     </context>
 </generatorConfiguration>

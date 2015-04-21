@@ -14,15 +14,18 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="${package}"/>
+	<context:component-scan base-package="${package}">
+        <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+        <context:exclude-filter expression="org.springframework.web.bind.annotation.ControllerAdvice" type="annotation"/>
+    </context:component-scan>
 	
 	<!--<context:property-placeholder location="classpath:tspringmvc-${parentArtifactId}-config.properties" order="1" ignore-unresolvable="true"/>-->
 
-	<!--<bean id="jvmStatCollector" class="${package}.timo.util.log.stat.JvmStatCollector" init-method="start" />-->
-	<!--<bean id="osStatCollector" class="${package}.timo.util.log.stat.OsStatCollector" init-method="start" />-->
+	<!--<bean id="jvmStatCollector" class="com.edwardsbean.timo.util.log.stat.JvmStatCollector" init-method="start" />-->
+	<!--<bean id="osStatCollector" class="com.edwardsbean.timo.util.log.stat.OsStatCollector" init-method="start" />-->
 
-	<!--<bean id="dalDigestLogInterceptor" class="${package}.timo.util.log.digest.BasicDigestLogInterceptor" c:loggerName="DAL-DIGEST-LOGGER" p:printArguments="${symbol_dollar}{demo.logs.digest.dal.arguments}" />-->
-	<!--<bean id="salDigestLogInterceptor" class="${package}.timo.util.log.digest.BasicDigestLogInterceptor" c:loggerName="SAL-DIGEST-LOGGER" p:printArguments="${symbol_dollar}{demo.logs.digest.sal.arguments}" p:printResults="${symbol_dollar}{demo.logs.digest.sal.results}" />-->
+	<!--<bean id="dalDigestLogInterceptor" class="com.edwardsbean.timo.util.log.digest.BasicDigestLogInterceptor" c:loggerName="DAL-DIGEST-LOGGER" p:printArguments="${symbol_dollar}{demo.logs.digest.dal.arguments}" />-->
+	<!--<bean id="salDigestLogInterceptor" class="com.edwardsbean.timo.util.log.digest.BasicDigestLogInterceptor" c:loggerName="SAL-DIGEST-LOGGER" p:printArguments="${symbol_dollar}{demo.logs.digest.sal.arguments}" p:printResults="${symbol_dollar}{demo.logs.digest.sal.results}" />-->
 	
 	<!--<aop:config>-->
 		<!--<aop:advisor advice-ref="dalDigestLogInterceptor" pointcut="within(${package}.dal.dao..*)"/>-->

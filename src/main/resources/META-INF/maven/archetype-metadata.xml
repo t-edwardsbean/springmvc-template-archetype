@@ -5,6 +5,7 @@
       <includes>
         <include>**/*.xml</include>
         <include>**/*.properties</include>
+        <include>**/*.sql</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
@@ -93,15 +94,16 @@
         <module id="${rootArtifactId}-test" dir="test" name="${rootArtifactId}-test">         
 		<fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
-              <directory>src/test/java</directory>
+              <directory>src/main/java</directory>
               <includes>
                 <include>**/*.java</include>
               </includes>
             </fileSet>
             <fileSet filtered="true" encoding="UTF-8">
-              <directory>src/test/resources</directory>
+              <directory>src/main/resources</directory>
               <includes>
                 <include>**/*.xml</include>
+                <include>**/*.properties</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -110,12 +112,25 @@
     </module>
     <module id="${rootArtifactId}-war" dir="war" name="${rootArtifactId}-war">
       <fileSets>
+	  <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.xml</include>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/webapp</directory>
+          <directory>src/main/webapp/WEB-INF</directory>
           <includes>
-            <include>**/*.xml</include>
+            <include>**/*.*</include>
           </includes>
         </fileSet>       
+		<fileSet filtered="false" encoding="UTF-8">
+          <directory>src/main/webapp/swagger-resource</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet> 
       </fileSets>
     </module>
   </modules>

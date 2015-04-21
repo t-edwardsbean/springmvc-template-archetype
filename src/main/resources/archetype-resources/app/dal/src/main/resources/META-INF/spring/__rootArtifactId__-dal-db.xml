@@ -22,11 +22,11 @@
  
 	<!-- Druid DataSource -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-		<property name="url" value="jdbc:mysql://localhost:3306/weather_crawler?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
-		<property name="username" value="test" />
+		<property name="url" value="jdbc:mysql://localhost:3306/game?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
 		<property name="connectProperties">
 			<props>
-				<prop key="password" >test</prop>
+				<prop key="password" >123456</prop>
 				<prop key="druid.stat.logSlowSql">true</prop>
 				<prop key="druid.stat.slowSqlMillis">5000</prop>
 				<prop key="connectTimeout">1000</prop>

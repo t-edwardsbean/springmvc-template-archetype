@@ -5,28 +5,29 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:context="http://www.springframework.org/schema/context"
 	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<mvc:annotation-driven/>
 
-	<!--<mvc:interceptors>-->
-		<!--<mvc:interceptor>-->
-			<!--<mvc:mapping path="/**"/>-->
-			<!--<bean class="com.edwardsbean.timo.log.LogInterceptor"/>-->
-		<!--</mvc:interceptor>-->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.edwardsbean.timo.log.LogInterceptor"/>
+		</mvc:interceptor>
 		<!--<mvc:interceptor>-->
 			<!--<mvc:mapping path="/**"/>-->
 			<!--<bean class="com.edwardsbean.timo.security.AuthInterceptor"/>-->
 		<!--</mvc:interceptor>-->
-	<!--</mvc:interceptors>-->
+	</mvc:interceptors>
 
-	<!--<mvc:resources mapping="/**" location="/swagger-resource/" />-->
+	<mvc:resources mapping="/**" location="/swagger-resource/" />
 
-	<!--<bean class="com.edwardsbean.timo.service.MySwaggerConfig"/>-->
+	<bean class="com.edwardsbean.timo.swagger.SwaggerConfig" p:projectName="${parentArtifactId}" p:email="edwardsbean@gmail.com" p:projectDescription="${parentArtifactId}在线文档，用于测试接口"/>
 
-	<!--<bean class="com.edwardsbean.timo.service.exception.CustomHandlerExceptionResolver" id="customHandlerExceptionResolver"/>-->
+	<bean class="com.edwardsbean.timo.service.exception.CustomHandlerExceptionResolver" id="customHandlerExceptionResolver"/>
 
 
 	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
@@ -34,6 +35,6 @@
 	<!--<property name="suffix" value=".jsp" />-->
 	<!--</bean>-->
 
-	<context:component-scan base-package="com.haomiao"/>
+	<context:component-scan base-package="${package}"/>
 
 </beans>

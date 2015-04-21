@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS ${rootArtifactId};
+CREATE DATABASE ${rootArtifactId} DEFAULT CHARACTER SET utf8;
+USE ${rootArtifactId};
+
+CREATE TABLE IF NOT EXISTS ${rootArtifactId}_phone(
+  id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'phone id',
+  content VARCHAR(20) NOT NULL DEFAULT '' COMMENT 'content'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '${rootArtifactId} phone table'
