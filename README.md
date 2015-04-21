@@ -3,5 +3,5 @@
 - 创建工程
 
 ```
-mvn archetype:generate -DarchetypeGroupId=com.edwardsbean -DarchetypeArtifactId=springmvc-archetype  -DarchetypeCatalog=local -DarchetypeRepository=local -DgroupId=xx.xx.xx -DartifactId=xx
+mvn archetype:generate -DarchetypeGroupId=com.edwardsbean.springmvc -DarchetypeArtifactId=springmvc-archetype  -DarchetypeCatalog=local -DarchetypeRepository=local -DgroupId=xx.xx.xx -DartifactId=xx
 ```
