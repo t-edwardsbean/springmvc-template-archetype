@@ -22,11 +22,11 @@
  
 	<!-- Druid DataSource -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-		<property name="url" value="jdbc:mysql://localhost:3306/game?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
-		<property name="username" value="root" />
+		<property name="url" value="${symbol_dollar}{db.url}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="${symbol_dollar}{db.user}" />
 		<property name="connectProperties">
 			<props>
-				<prop key="password" >123456</prop>
+				<prop key="password" >${symbol_dollar}{db.password}</prop>
 				<prop key="druid.stat.logSlowSql">true</prop>
 				<prop key="druid.stat.slowSqlMillis">5000</prop>
 				<prop key="connectTimeout">1000</prop>
@@ -34,7 +34,7 @@
 			</props>
 		</property>
 		<!--<property name="passwordCallback">-->
-			<!--<bean class="com.edwardsbean.timo.storage.db.EncryptedPasswordCallback" p:publicKeyPath="${symbol_dollar}{demo_jdbc_password_public_key}"/>-->
+			<!--<bean class="com.baifubao.superhero.util.storage.db.EncryptedPasswordCallback" p:publicKeyPath="${symbol_dollar}{demo_jdbc_password_public_key}"/>-->
 		<!--</property>-->
 	 			
 		<property name="initialSize" value="2" />

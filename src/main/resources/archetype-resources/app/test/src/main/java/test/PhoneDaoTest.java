@@ -30,9 +30,14 @@ public class PhoneDaoTest {
     }
 
     @Test
-    public void testM${parentArtifactId}erInsert() throws Exception {
+    public void testMapperInsert() throws Exception {
         Phone phone = new Phone();
         phone.setContent("this i2s a content");
         m${parentArtifactId}er.insert(phone);
+    }
+	
+	@Test
+    public void testM${parentArtifactId}erSelect() throws Exception {
+        System.out.println(m${parentArtifactId}er.selectByPrimaryKey(1L));
     }
 }

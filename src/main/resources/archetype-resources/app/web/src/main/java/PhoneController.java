@@ -1,8 +1,8 @@
 package ${package};
 
 import com.edwardsbean.timo.service.model.Msg;
-import com.edwardsbean.tspringnew.biz.PhoneService;
-import com.edwardsbean.tspringnew.dal.entity.Phone;
+import ${package}.biz.PhoneService;
+import ${package}.dal.entity.Phone;
 import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;

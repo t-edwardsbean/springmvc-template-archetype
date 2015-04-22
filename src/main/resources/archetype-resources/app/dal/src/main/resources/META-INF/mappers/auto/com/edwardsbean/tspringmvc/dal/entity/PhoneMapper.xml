@@ -75,7 +75,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from game_phone
+    from ${rootArtifactId}_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -86,17 +86,17 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from game_phone
+    from ${rootArtifactId}_phone
     where id = ${symbol_pound}{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from game_phone
+    delete from ${rootArtifactId}_phone
     where id = ${symbol_pound}{id,jdbcType=BIGINT}
   </delete>
   <select id="selectByExampleWithPaging" resultMap="BaseResultMap" parameterType="${package}.dal.entity.PhoneExample" >
     select
     <include refid="Base_Column_List" />
-    from game_phone
+    from ${rootArtifactId}_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -106,17 +106,17 @@
     limit ${symbol_dollar}{startIndex},${symbol_dollar}{pageSize}
   </select>
   <delete id="deleteByExample" parameterType="${package}.dal.entity.PhoneExample" >
-    delete from game_phone
+    delete from ${rootArtifactId}_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="${package}.dal.entity.Phone" >
-    insert into game_phone (id, content)
+    insert into ${rootArtifactId}_phone (id, content)
     values (${symbol_pound}{id,jdbcType=BIGINT}, ${symbol_pound}{content,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="${package}.dal.entity.Phone" >
-    insert into game_phone
+    insert into ${rootArtifactId}_phone
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -135,13 +135,13 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="${package}.dal.entity.PhoneExample" resultType="java.lang.Integer" >
-    select count(*) from game_phone
+    select count(*) from ${rootArtifactId}_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update game_phone
+    update ${rootArtifactId}_phone
     <set >
       <if test="record.id != null" >
         id = ${symbol_pound}{record.id,jdbcType=BIGINT},
@@ -155,7 +155,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update game_phone
+    update ${rootArtifactId}_phone
     set id = ${symbol_pound}{record.id,jdbcType=BIGINT},
       content = ${symbol_pound}{record.content,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -163,7 +163,7 @@
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="${package}.dal.entity.Phone" >
-    update game_phone
+    update ${rootArtifactId}_phone
     <set >
       <if test="content != null" >
         content = ${symbol_pound}{content,jdbcType=VARCHAR},
@@ -172,7 +172,7 @@
     where id = ${symbol_pound}{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="${package}.dal.entity.Phone" >
-    update game_phone
+    update ${rootArtifactId}_phone
     set content = ${symbol_pound}{content,jdbcType=VARCHAR}
     where id = ${symbol_pound}{id,jdbcType=BIGINT}
   </update>
