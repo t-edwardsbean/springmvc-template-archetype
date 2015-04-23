@@ -246,6 +246,7 @@
                 <db.user>root</db.user>
                 <db.password>123456</db.password>
 				<log.level>debug</log.level>
+				<log.appender>stdout</log.appender>
             </properties>
         </profile>
         <profile>
@@ -257,6 +258,7 @@
                 <db.user>${rootArtifactId}</db.user>
                 <db.password>123456</db.password>
 				<log.level>info</log.level>
+				<log.appender>file</log.appender>
             </properties>
         </profile>
     </profiles>
