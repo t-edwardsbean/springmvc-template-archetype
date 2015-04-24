@@ -13,7 +13,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:META-INF/spring/${rootArtifactId}-base.xml,classpath:META-INF/spring/${rootArtifactId}-dal-db.xml,classpath:META-INF/spring/${rootArtifactId}-dal.xml,WEB-INF/spring/webmvc-config.xml</param-value>
+			<param-value>classpath*:META-INF/spring/${rootArtifactId}-*.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
