@@ -21,6 +21,7 @@ public class PhoneDaoImpl implements PhoneDao {
         phoneM${parentArtifactId}er.insert(phone);
     }
 
+	@Cacheable(value = "phone", key = "T(java.lang.Long).toString(#id)")
     @Override
     public Phone getPhone(long id) {
         return phoneM${parentArtifactId}er.selectByPrimaryKey(id);
