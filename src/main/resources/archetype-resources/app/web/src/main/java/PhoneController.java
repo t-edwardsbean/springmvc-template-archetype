@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class PhoneController extends BaseController {
+public class PhoneController {
     @Autowired
     PhoneService phoneService;
 
@@ -30,6 +30,14 @@ public class PhoneController extends BaseController {
         int id = phoneService.insertPhone(phone);
         Msg msg = new Msg();
         msg.setReturnData(id);
+        return msg;
+    }
+	
+	@ApiOperation(value = "上传JSON日志", httpMethod = "POST", response = Msg.class, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/phones/logs", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Msg upload(@RequestBody Phone phone) {
+        Msg msg = new Msg();
+        msg.setReturnData(phone);
         return msg;
     }
 }
