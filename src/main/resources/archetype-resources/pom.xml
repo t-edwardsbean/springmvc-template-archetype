@@ -12,11 +12,6 @@
             <id>baidu</id>
             <url>http://172.17.156.61:8081/nexus/content/groups/public/</url>
         </repository>
-        <!--<repository>-->
-        <!--<id>oss-jfrog-artifactory</id>-->
-        <!--<name>oss-jfrog-artifactory-releases</name>-->
-        <!--<url>http://oss.jfrog.org/artifactory/oss-release-local</url>-->
-        <!--</repository>-->
     </repositories>
 
     <properties>
