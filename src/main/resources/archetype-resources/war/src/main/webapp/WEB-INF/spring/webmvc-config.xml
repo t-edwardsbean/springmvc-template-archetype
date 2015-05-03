@@ -12,6 +12,35 @@
 
 	<mvc:annotation-driven/>
 
+	<!--<bean name="handlerAdapter" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+		<!--<property name="webBindingInitializer">-->
+			<!--<bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">-->
+				<!--<property name="conversionService" ref="conversionService"/>-->
+				<!--&lt;!&ndash;<property name="validator">&ndash;&gt;-->
+					<!--&lt;!&ndash;<bean class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>&ndash;&gt;-->
+				<!--&lt;!&ndash;</property>&ndash;&gt;-->
+			<!--</bean>-->
+		<!--</property>-->
+		<!--<property name="messageConverters">-->
+			<!--<list>-->
+				<!--<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>-->
+				<!--<bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>-->
+				<!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>-->
+				<!--<bean class="org.springframework.http.converter.StringHttpMessageConverter"></bean>-->
+				<!--<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"></bean>-->
+				<!--<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"></bean>-->
+				<!--<bean class="org.springframework.http.converter.xml.XmlAwareFormHttpMessageConverter"></bean>-->
+				<!--&lt;!&ndash;FormHttpMessageConverter 是否需要添加&ndash;&gt;-->
+			<!--</list>-->
+		<!--</property>-->
+	<!--</bean>-->
+	<!--<bean id="conversionService" class="org.springframework.format.support.DefaultFormattingConversionService"/>-->
+
+	<!--<bean id="handlerMapping" class="com.edwardsbean.timo.service.version.VersionRequestMappingHandlerMapping">-->
+		<!--<property name="order" value="0"/>-->
+		<!--<property name='useTrailingSlashMatch' value='false'/>-->
+	<!--</bean>-->
+
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
